@@ -1,0 +1,15 @@
+.env
+# *.override.yml
+.db_initialized
+.history
+
+**/__pycache__/
+
+venv/
+
+.vscode/settings.json
+
+.DS_Store
+express.log
+fastapi.log
+react.log

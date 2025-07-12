@@ -1,0 +1,16 @@
+FROM node:20-alpine
+
+WORKDIR /app
+COPY ./package.json ./
+RUN npm install
+
+COPY ./ ./
+COPY ./SQL_Commands.sql ./SQL_Commands.sql
+
+RUN npm run build
+
+COPY ./templates ./dist/templates
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
